@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://furryfrags-catimages.neocities.org/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  // Call this when your page is fully loaded and ready to show
+  window.addEventListener('load', () => {
+    sdk.actions.ready();
+  });
+
+  // Or if you have custom loading (e.g., images/API), call it later:
+  // sdk.actions.ready();
+</script>
+    <title>Cat images uwu</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+        img {
+            max-width: 90%;
+            height: auto;
+            margin: 20px 0;
+            border: 3px solid #333;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 18px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cat images uwu</h1>
+    
+    <img id="catImage" src="./Cat images uwu_files/cat" alt="Random cat">
+    
+    <br>
+    <button onclick="getNewCat()">Another cat pls</button>
+
+    <script>
+        function getNewCat() {
+            // Simple cache-busting trick to get a new random image
+            const timestamp = new Date().getTime();
+            document.getElementById("catImage").src = "https://cataas.com/cat?" + timestamp;
+        }
+    </script>
+    <img src="./Cat images uwu_files/neocities.png">
+    <script type="module">
+  import { sdk } from 'https://esm.sh/@farcaster/miniapp-sdk';
+
+  window.addEventListener('load', async () => {
+    try {
+      await sdk.actions.ready();
+      console.log("Farcaster mini app is ready!");
+    } catch (err) {
+      console.error("Error calling sdk.actions.ready()", err);
+    }
+  });
+</script>
+
+</body></html>
